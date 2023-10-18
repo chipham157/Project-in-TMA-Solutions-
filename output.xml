@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20231018 13:46:28.212" rpa="false" schemaversion="3">
+<suite id="s1" name="Add Job Titles  Fail" source="d:\Chi_Robot\Add Job Titles_ Fail.robot">
+<kw name="Open website OrangeHRM" library="AddJobTitles" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231018 13:46:28.738" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20231018 13:46:28.738" endtime="20231018 13:47:02.435"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231018 13:47:02.435" endtime="20231018 13:47:02.563"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>7</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231018 13:47:02.565" endtime="20231018 13:47:02.567"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="username"]</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:02.575" level="INFO">Typing text 'Admin' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:02.567" endtime="20231018 13:47:03.810"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="password"]</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:03.812" level="INFO">Typing text 'admin123' into text field '//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:03.811" endtime="20231018 13:47:03.994"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:03.998" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:03.994" endtime="20231018 13:47:09.229"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PAGE_ADMIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:09.230" level="INFO">Clicking element '(//a[@class="oxd-main-menu-item"])[1]'.</msg>
+<status status="PASS" starttime="20231018 13:47:09.229" endtime="20231018 13:47:11.433"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${JOB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:11.435" level="INFO">Clicking element '(//span[@class="oxd-topbar-body-nav-tab-item"])[2]'.</msg>
+<status status="PASS" starttime="20231018 13:47:11.434" endtime="20231018 13:47:12.074"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${JOB_TITLES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:12.075" level="INFO">Clicking element '//li/a[text()="Job Titles"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:12.074" endtime="20231018 13:47:12.669"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_JOBTITLES_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:12.672" level="INFO">Clicking element '//div[@class="orangehrm-header-container"]//button'.</msg>
+<status status="PASS" starttime="20231018 13:47:12.670" endtime="20231018 13:47:13.800"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:18.812" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231018 13:47:13.801" endtime="20231018 13:47:18.813"/>
+</kw>
+<status status="PASS" starttime="20231018 13:46:28.737" endtime="20231018 13:47:18.814"/>
+</kw>
+<test id="s1-t1" name="TC_28 Check the Job Specification field upload an invalid file" line="15">
+<kw name="AddJobTitles_operation">
+<arg>Developer</arg>
+<arg>write code, create programs, software</arg>
+<arg>D:\\Chi_Robot\\a.pptx</arg>
+<arg>Not available</arg>
+<kw name="Enter_input" library="AddJobTitles">
+<arg>${Input_Job Titles}</arg>
+<arg>${Input_Job Description}</arg>
+<arg>${Input_Job Specification}</arg>
+<arg>${Input_Note}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Xpath_Job Title}</arg>
+<arg>${Input_Job Titles}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:18.822" level="INFO">Typing text 'Developer' into text field '//label[text()="Job Title"]//ancestor::div[@class="oxd-input-group oxd-input-field-bottom-space"]//input'.</msg>
+<status status="PASS" starttime="20231018 13:47:18.817" endtime="20231018 13:47:19.028"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Xpath_Job Description}</arg>
+<arg>${Input_Job Description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:19.030" level="INFO">Typing text 'write code, create programs, software' into text field '//textarea[@placeholder="Type description here"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:19.029" endtime="20231018 13:47:19.229"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${Xpath_Job Specification}</arg>
+<arg>${Input_Job Specification}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20231018 13:47:19.231" level="INFO">Sending D:\Chi_Robot\a.pptx to browser.</msg>
+<status status="PASS" starttime="20231018 13:47:19.230" endtime="20231018 13:47:19.272"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Xpath_Note}</arg>
+<arg>${Input_Note}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:19.274" level="INFO">Typing text 'Not available' into text field '//textarea[@placeholder="Add note"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:19.273" endtime="20231018 13:47:19.418"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Save}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:19.421" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:19.419" endtime="20231018 13:47:19.488"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:18.817" endtime="20231018 13:47:19.489"/>
+</kw>
+<kw name="Load_message" library="AddJobTitles">
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:24.494" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231018 13:47:19.490" endtime="20231018 13:47:24.494"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:19.489" endtime="20231018 13:47:24.494"/>
+</kw>
+<kw name="Message" library="AddJobTitles">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//div[@class="orangehrm-card-container"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231018 13:47:24.570" level="INFO">Element '//div[@class="orangehrm-card-container"]' is displayed.</msg>
+<status status="PASS" starttime="20231018 13:47:24.496" endtime="20231018 13:47:24.570"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:24.495" endtime="20231018 13:47:24.571"/>
+</kw>
+<kw name="Clear_Text_All_Field" library="AddJobTitles">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Xpath_Job Title}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231018 13:47:24.572" endtime="20231018 13:47:24.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:27.899" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231018 13:47:24.894" endtime="20231018 13:47:27.899"/>
+</kw>
+<kw name="Clear_Text" library="AddJobTitles">
+<arg>${Xpath_Job Title}</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//label[text()="Job Title"]//ancestor::div[@class="oxd-input-group oxd-input-field-bottom-space"]//input</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231018 13:47:27.900" endtime="20231018 13:47:28.197"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:31.206" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231018 13:47:28.199" endtime="20231018 13:47:31.206"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:31.207" level="INFO">Clicking element '//label[text()="Job Title"]//ancestor::div[@class="oxd-input-group oxd-input-field-bottom-space"]//input'.</msg>
+<status status="PASS" starttime="20231018 13:47:31.206" endtime="20231018 13:47:31.278"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231018 13:47:31.280" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //label[text()="Job Title"]//ancestor::div[@class="oxd-input-group oxd-input-field-bottom-space"]//input element.</msg>
+<msg timestamp="20231018 13:47:31.584" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20231018 13:47:31.584" level="INFO">Sending key a</msg>
+<msg timestamp="20231018 13:47:31.585" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20231018 13:47:31.585" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20231018 13:47:31.585" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20231018 13:47:31.278" endtime="20231018 13:47:31.631"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:31.942" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20231018 13:47:31.632" endtime="20231018 13:47:31.944"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:27.899" endtime="20231018 13:47:31.945"/>
+</kw>
+<kw name="Clear_Text" library="AddJobTitles">
+<arg>${Xpath_Job Description}</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//label[text()="Job Title"]//ancestor::div[@class="oxd-input-group oxd-input-field-bottom-space"]//input</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231018 13:47:31.946" endtime="20231018 13:47:32.229"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:35.232" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231018 13:47:32.230" endtime="20231018 13:47:35.233"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:35.235" level="INFO">Clicking element '//textarea[@placeholder="Type description here"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:35.234" endtime="20231018 13:47:35.297"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231018 13:47:35.299" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //textarea[@placeholder="Type description here"] element.</msg>
+<msg timestamp="20231018 13:47:35.604" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20231018 13:47:35.604" level="INFO">Sending key a</msg>
+<msg timestamp="20231018 13:47:35.604" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20231018 13:47:35.604" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20231018 13:47:35.605" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20231018 13:47:35.298" endtime="20231018 13:47:35.644"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:35.957" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20231018 13:47:35.644" endtime="20231018 13:47:35.958"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:31.945" endtime="20231018 13:47:35.959"/>
+</kw>
+<kw name="Clear_Text" library="AddJobTitles">
+<arg>${Xpath_Note}</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//label[text()="Job Title"]//ancestor::div[@class="oxd-input-group oxd-input-field-bottom-space"]//input</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231018 13:47:35.962" endtime="20231018 13:47:36.266"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:39.272" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231018 13:47:36.266" endtime="20231018 13:47:39.274"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231018 13:47:39.275" level="INFO">Clicking element '//textarea[@placeholder="Add note"]'.</msg>
+<status status="PASS" starttime="20231018 13:47:39.274" endtime="20231018 13:47:39.334"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231018 13:47:39.336" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //textarea[@placeholder="Add note"] element.</msg>
+<msg timestamp="20231018 13:47:39.641" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20231018 13:47:39.641" level="INFO">Sending key a</msg>
+<msg timestamp="20231018 13:47:39.642" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20231018 13:47:39.642" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20231018 13:47:39.643" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20231018 13:47:39.335" endtime="20231018 13:47:39.660"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231018 13:47:39.971" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20231018 13:47:39.660" endtime="20231018 13:47:39.972"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:35.959" endtime="20231018 13:47:39.972"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:24.571" endtime="20231018 13:47:39.973"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:18.817" endtime="20231018 13:47:39.974"/>
+</kw>
+<status status="PASS" starttime="20231018 13:47:18.815" endtime="20231018 13:47:39.978"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231018 13:47:39.983" endtime="20231018 13:47:43.303"/>
+</kw>
+<status status="PASS" starttime="20231018 13:46:28.219" endtime="20231018 13:47:43.304"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Add Job Titles  Fail">Add Job Titles  Fail</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

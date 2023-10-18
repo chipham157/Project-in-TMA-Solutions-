@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230802 20:59:02.136" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\ADMIN\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Admin">
+<arg>Peter Mac Anderson</arg>
+<arg>Enabled</arg>
+<arg>Alicee</arg>
+<arg>1234567</arg>
+<arg>1234567</arg>
+<msg timestamp="20230802 20:59:02.913" level="FAIL">No keyword with name 'Admin' found.</msg>
+<status status="FAIL" starttime="20230802 20:59:02.913" endtime="20230802 20:59:02.913"/>
+</kw>
+<status status="PASS" starttime="20230802 20:59:02.185" endtime="20230802 20:59:04.445"/>
+</kw>
+<status status="PASS" starttime="20230802 20:59:02.184" endtime="20230802 20:59:04.446"/>
+</test>
+<status status="PASS" starttime="20230802 20:59:02.140" endtime="20230802 20:59:04.447"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
